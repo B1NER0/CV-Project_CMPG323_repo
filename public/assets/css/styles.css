@@ -229,3 +229,27 @@ footer .footer-contents {
   width: 33.3333%; 
   text-align: center;
 }
+
+@media screen and (max-width: 1000px) {
+  
+    #my-img:before {
+        width: 100px;
+        height: auto;
+    }
+  
+  .column-left {
+    width: 100%;
+    
+  }
+  
+  .column-right {
+    width: 100%;
+  }
+  
+  .column-center {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+}
