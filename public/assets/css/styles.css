@@ -189,3 +189,43 @@ footer .footer-contents {
     display: none;
   }
 }
+
+.about {
+  margin-top: 2rem;
+  margin-right: 7rem;
+  margin-left: 7rem;
+}
+
+.about h1 {
+  color: #00a4d6 ;
+  padding-top: 2rem;
+}
+
+.rowAbout h1 {
+  
+  text-decoration: underline;
+}
+
+#my-img {
+  padding-top: 2rem;
+}
+
+.rowAbout:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column-left{ 
+  float: left;
+  width: 33.3333%;
+}
+.column-right{ 
+  float: right;
+  width: 33.3333%;
+}
+.column-center{ 
+  display: inline-block; 
+  width: 33.3333%; 
+  text-align: center;
+}
