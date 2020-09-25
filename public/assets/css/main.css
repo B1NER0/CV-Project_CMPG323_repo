@@ -115,41 +115,7 @@ hr:before {
 }
 
 
-@media screen and (max-width: 900px) {
-  
-    #my-img:before {
-        width: 130px;
-        height: auto;
-    }
-  
-  .column-left {
-    width: 100%;
-    
-  }
-  
-  .column-right {
-    width: 100%;
-  }
-  
-  .column-center {
-    width: 100%;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    text-align: center;
-  }
-  
-  .exCol1 {
-      width: 100%;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  
-  .exCol2 {
-    width: 100%;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
+
 
 #list-item {
   color: #00a4d6;
@@ -277,4 +243,41 @@ hr:before {
 
 #timePeriod {
     color: #00a4d6;
+}
+
+@media screen and (max-width: 900px) {
+  
+    #my-img:before {
+        width: 130px;
+        height: auto;
+    }
+  
+  .column-left {
+    width: 100%;
+    
+  }
+  
+  .column-right {
+    width: 100%;
+  }
+  
+  .column-center {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .exCol1 {
+      width: 100%;
+    padding-top: 3rem;
+  }
+  
+  .exCol2 {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
