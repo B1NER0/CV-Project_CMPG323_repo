@@ -7,11 +7,25 @@
     <meta name="description" content="" />
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/gradients.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
 <body class="">
+    
+    <header>
+            <nav class="website-nav" id="navbar">
+                <ul>
+                    <li><a class="home-link" href="https://aws.amazon.com/">Home</a></li>
+                    <li><a href="https://aws.amazon.com/what-is-cloud-computing/">About</a></li>
+                    <li><a href="https://aws.amazon.com/solutions/">Services</a></li>
+                    <li><a href="https://aws.amazon.com/contact-us/">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+    
+    
     <section class="about">
-        <h1 class="h1">My Profile</h1>
+        <h1 id="aboutHead">My Profile</h1>
         <div class="rowAbout" id="aboutMe">
         <div  class="column-left" id="personal">
             <h1>About me</h1>
@@ -42,7 +56,71 @@
             <button type="button" class="btn btn-primary">Primary</button>
         </div> -->
     </section>
-    <script src="assets/js/set-background.js"></script>
+    
+    
+    
+    <section class="mySkills">
+    <div class="skills">
+        <h1>Key Skills</h1>
+        <div class="skill">
+            <div class="skill-name">C#</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="80"></div>
+            </div>
+        </div>
+        
+        <div class="skill">
+            <div class="skill-name">HTML and CSS</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="68"></div>
+            </div>
+        </div>
+        
+        <div class="skill">
+            <div class="skill-name">Java</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="75"></div>
+            </div>
+        </div>
+        
+        <div class="skill">
+            <div class="skill-name">WordPress</div>
+            <div class="skill-bar">
+                <div class="skill-per" per="60"></div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <footer>
+        
+    </footer>
+    
+
+    <script src="js/set-background.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+        $('.skill-per').each(function(){
+            var $this = $(this);
+            var per = $this.attr('per');
+            $this.css("width", per+'%')
+        });
+        
+        $({animatedValue: 0}).animate({animatedValue: per},{
+            duartion: 1000,
+            step: function(){
+                $this.attr('per', Math.floor(this.animatedValue));
+            },
+            complete: function(){
+                $this.attr('per', Math.floor(this.animatedValue));
+            }
+        });
+        
+    </script>
 </body>
 
 </html>
