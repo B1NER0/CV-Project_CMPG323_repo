@@ -1,11 +1,11 @@
 body {
-    background-color: #c3f7f5;
+ /*   background-color: #c3f7f5;*/
+ background-color: #defffd;
 }
 
 h1 {
   color: #00a4d6 ;
   padding-top: 2rem;
-  font-weight: 400;
 }
 .h1 {
     
@@ -17,6 +17,29 @@ h1 {
 p {
     color: #161717;
 }
+
+hr {
+   
+  height: 30px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 1.5px 0 0 0; 
+  border-radius: 20px; 
+  width: 80%;
+  margin-top: 8rem;
+} 
+hr:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 0 0 1.5px 0; 
+  border-radius: 20px; 
+}
+
+
 
 /*
 
@@ -199,4 +222,47 @@ p {
   right: 0;
   transform: translateX(50%) rotate(45deg);
   border-radius: 2px;
+}
+
+/*Qualifications*/
+
+.qualTrain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.qualTrain h1 {
+    padding-bottom: 2rem;
+}
+
+
+.qualRow:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.exCol1{ 
+    float: left;
+    width: 30%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 50px;
+}
+.exCol2 {
+    width: 60%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+#timePeriod {
+    color: #00a4d6;
 }
