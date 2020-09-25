@@ -137,6 +137,20 @@ hr:before {
     padding-bottom: 3rem;
     text-align: center;
   }
+  
+  .exCol1 {
+      width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .exCol2 {
+      width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
 }
 
 #list-item {
