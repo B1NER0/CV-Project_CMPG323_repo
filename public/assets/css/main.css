@@ -4,6 +4,10 @@ body {
  background-color: #edf7f7;
 }
 
+a {
+    color: #24a7f2;
+}
+
 h1 {
   color: #00a4d6 ;
   padding-top: 2rem;
@@ -214,7 +218,7 @@ padding-right: 15px;
     padding-left: 15px;
     */
 
-.qualTrain {
+.TheContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -222,7 +226,7 @@ padding-right: 15px;
     margin-top: 5rem;
 }
 
-.qualTrain h1 {
+.TheContainer h1 {
     padding-bottom: 2rem;
 }
 
@@ -321,3 +325,7 @@ padding-right: 15px;
       padding-right: 3rem;
     }
 }
+
+
+/*HEROOOO*/
+
