@@ -1,6 +1,7 @@
 body {
- /*   background-color: #c3f7f5;*/
- background-color: #defffd;
+ /*   background-color: #c3f7f5;
+ background-color: #defffd;*/
+ background-color: #edf7f7;
 }
 
 h1 {
@@ -202,7 +203,16 @@ hr:before {
   border-radius: 2px;
 }
 
-/*Qualifications*/
+/*Qualifications
+
+padding-right: 15px;
+    padding-left: 50px;
+    
+    
+    
+    padding-right: 15px;
+    padding-left: 15px;
+    */
 
 .qualTrain {
     display: flex;
@@ -214,6 +224,13 @@ hr:before {
 
 .qualTrain h1 {
     padding-bottom: 2rem;
+}
+
+.qualRow {
+    
+  padding-bottom: 5rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
 }
 
 
@@ -228,22 +245,38 @@ hr:before {
     width: 30%;
     position: relative;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 50px;
+    
 }
 .exCol2 {
     width: 60%;
     float: left;
     position: relative;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
     box-sizing: border-box;
 }
 
 #timePeriod {
     color: #00a4d6;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 900px) {
   
