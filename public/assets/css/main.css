@@ -115,10 +115,10 @@ hr:before {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   
     #my-img:before {
-        width: 100px;
+        width: 130px;
         height: auto;
     }
   
@@ -142,14 +142,12 @@ hr:before {
       width: 100%;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    text-align: center;
   }
   
   .exCol2 {
-      width: 100%;
+    width: 100%;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    text-align: center;
   }
 }
 
