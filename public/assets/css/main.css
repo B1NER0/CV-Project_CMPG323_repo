@@ -229,8 +229,8 @@ padding-right: 15px;
 .qualRow {
     
   padding-bottom: 5rem;
-  padding-left: 20rem;
-  padding-right: 20rem;
+  padding-left: 20vh;
+  padding-right: 20vh;
 }
 
 
@@ -248,11 +248,13 @@ padding-right: 15px;
     
 }
 .exCol2 {
-    width: 60%;
+    width: 65%;
     float: left;
     position: relative;
     min-height: 1px;
     box-sizing: border-box;
+    
+    padding-left: 3rem;
 }
 
 #timePeriod {
@@ -278,7 +280,7 @@ padding-right: 15px;
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   
     #my-img:before {
         width: 130px;
@@ -302,15 +304,20 @@ padding-right: 15px;
   }
   
   .exCol1 {
-      width: 100%;
+    width: 100%;
     padding-top: 3rem;
   }
   
   .exCol2 {
     width: 100%;
     padding-top: 1rem;
-    padding-bottom: 3rem;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 0;
   }
+  
+  .qualRow {
+    
+      padding-bottom: 2rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
 }
