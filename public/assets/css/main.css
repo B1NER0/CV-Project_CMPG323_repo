@@ -329,3 +329,8 @@ padding-right: 15px;
 
 /*HEROOOO*/
 
+#matrix-hero {
+  max-width: 100%;
+  background-color: #001;
+}
+
