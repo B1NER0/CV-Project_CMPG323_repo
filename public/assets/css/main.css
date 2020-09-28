@@ -2,6 +2,7 @@ body {
  /*   background-color: #c3f7f5;
  background-color: #defffd;*/
  background-color: #edf7f7;
+ font-size: 15px;
 }
 
 a {
@@ -156,7 +157,7 @@ hr:before {
 }
 
 .skills {
-  width: 60%;
+  width: 50%;
   
 }
 
@@ -220,6 +221,7 @@ padding-right: 15px;
 
 .TheContainer {
     display: flex;
+    width: 70%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -266,7 +268,11 @@ padding-right: 15px;
 }
 
 
-
+#quali {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -334,3 +340,4 @@ padding-right: 15px;
   background-color: #001;
 }
 
+/* certifications */
