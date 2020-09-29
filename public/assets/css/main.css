@@ -331,7 +331,7 @@ a:active {
 
 
 
-@media screen and (max-width: 768) {
+@media screen and (max-width: 800px) {
   
   .TheContainer {
     width: 80%;
