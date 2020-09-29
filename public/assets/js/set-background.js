@@ -1,8 +1,8 @@
 
-
 //var idx = Math.floor((new Date().getHours()));
 //var body = document.getElementsByTagName("body")[0];
 //body.className = "heaven-" + idx;
+
 
 
 
@@ -30,7 +30,7 @@ function matrix () {
   // Draw a semitransparent black rectangle on top of previous drawing
   ctx.fillStyle = '#0001';
   ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
-
+  //  navi.style.top = canvas.height + 'px';
   // Set color to green and font to 15pt monospace in the drawing context
   ctx.fillStyle = '#0f0';
   ctx.font = '12pt monospace';
@@ -56,7 +56,6 @@ function matrix () {
     window.onresize = function test(){
             
             ctx.clearRect(0,0, canvas.width, canvas.height);
-            
             // set the width and height of the canvas
            // w = canvas.width = window.innerWidth;
             //h = canvas.height = window.innerHeight;
@@ -76,6 +75,7 @@ function matrix () {
             ctx.fillStyle = '#0001';
             ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
           
+           
             // Set color to green and font to 15pt monospace in the drawing context
             ctx.fillStyle = '#0f0';
             ctx.font = '12pt monospace';
@@ -86,10 +86,12 @@ function matrix () {
             ypos[x] = 1;
             
            
+            
+           
         }
 
 // render the animation at 20 FPS.
 
 setInterval(matrix, 50);
-
+ 
 

@@ -176,7 +176,7 @@ footer .footer-contents {
   }
 
   h1 {
-    font-size: 5rem;
+    
   }
 
   .message .twitter-link img {
@@ -198,14 +198,11 @@ footer .footer-contents {
 }
 
 .about h1 {
-  color: #00a4d6 ;
+  color: #2291A3 ;
   padding-top: 2rem;
 }
 
-.rowAbout h1 {
-  
-  text-decoration: underline;
-}
+
 
 #my-img {
   padding-top: 2rem;
