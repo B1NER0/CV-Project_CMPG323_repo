@@ -331,7 +331,7 @@ a:active {
 
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768) {
   
   .TheContainer {
     width: 80%;
@@ -400,10 +400,11 @@ a:active {
    /* Style the navigation menu */
 .mobileMenu {
   overflow: hidden;
-  background-color: #333;
+  background-color: #24a7f2;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -437,7 +438,7 @@ a:active {
 
 /* Style the active link (or home/logo) */
 .active {
-  background-color: #4CAF50;
+  background-color: #24a7f2;
   color: white;
 } 
   
