@@ -307,6 +307,8 @@ a:active {
     background-color: #00cfff;
 }
 
+
+
 /* The navigation menu links */
 .sidenav a {
   text-decoration: none;
@@ -325,6 +327,8 @@ a:active {
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+
+
 
 
 @media screen and (max-width: 1000px) {
@@ -385,5 +389,78 @@ a:active {
     font-size: 18px;
     text-align: center;
     
+  }
+  
+ 
+  
+}
+
+
+ /*MOBILE MENU */
+   /* Style the navigation menu */
+.mobileMenu {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.mobileMenu #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.mobileMenu a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.mobileMenu a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.mobileMenu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #4CAF50;
+  color: white;
+} 
+  
+  .mobileMenu {
+    display: none;
+  }
+
+@media only screen and (max-device-width : 640px) {
+  .mobileMenu {
+    display: block;
+  }
+  
+  .sidenav {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+.mobileMenu {
+    display: block;
+  }
+  
+  .sidenav {
+    display: none;
   }
 }
