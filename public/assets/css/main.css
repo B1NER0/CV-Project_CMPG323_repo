@@ -463,4 +463,8 @@ a:active {
   .sidenav {
     display: none;
   }
+  
+  .TheContainer {
+    width: 100%;
+  }
 }
