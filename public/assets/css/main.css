@@ -2,7 +2,7 @@ body {
  /*   background-color: #c3f7f5;
  background-color: #defffd;*/
  background-color: #faffff;
- font-size: 15px;
+ font-size: 1.6rem;
 }
 
 a {
@@ -298,6 +298,15 @@ justify-content: center;
   border-radius: 10px;
 }
 
+.sidenav ul {
+  list-style: none;
+  padding: 0;
+}
+
+a:active {
+    background-color: #00cfff;
+}
+
 /* The navigation menu links */
 .sidenav a {
   text-decoration: none;
@@ -319,6 +328,15 @@ justify-content: center;
 
 
 @media screen and (max-width: 1000px) {
+  
+  .TheContainer {
+    width: 80%;
+    margin-left: 10%;
+  }
+  
+  p {
+    font-size: 1.6rem;
+  }
   
     #my-img:before {
         width: 130px;
