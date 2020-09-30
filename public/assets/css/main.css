@@ -90,6 +90,7 @@ hr:before {
   display: flex;
 align-content: center;
 justify-content: center;
+padding-bottom: 3rem;
 }
 
 .about h2 {
@@ -156,6 +157,7 @@ justify-content: center;
   align-items: center;
   width: 100%;
   padding-top: 3rem;
+  padding-bottom: 3rem;
   color: #161717;
 }
 
@@ -487,8 +489,8 @@ a:active {
 
 /*LANGUAGES*/
 
-/* Import the Google Font 'Lato' */
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+/* Import the Google Font 'Lato'  @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);*/
+
 
 /* Container styles */
 
@@ -522,6 +524,7 @@ a:active {
 
 .chart h2 {
   padding-bottom: 2rem;
+  padding-top: 1rem;
 }
 
 /* END Container styles */
@@ -559,7 +562,7 @@ a:active {
   -webkit-animation-play-state: running;
   
   /* firefox bug fix - won't rotate at 90deg angles */
-  -moz-transform: rotate(-90deg) translateX(-230px);
+  -moz-transform: rotate(-90deg) translateX(-240px);
 }
 
 .chart:hover .outer {
@@ -676,3 +679,64 @@ a:active {
   }
 }
 /* END Keyframes for the initial animation */
+
+/*CONTACT ME */
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #2291A3;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #23BFD9;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+color: #161717;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  width: 50%;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+
+/* Clear floats after the columns */
+.Crow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
