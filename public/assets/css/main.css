@@ -505,7 +505,7 @@ a:active {
   position: relative;
   display: inline-block;
   color: #131313;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   padding: 2rem;
 }
@@ -677,13 +677,8 @@ a:active {
 }
 
 
-@media screen and (max-width: 800px) {
-  .outer {
-  
-  /* firefox bug fix - won't rotate at 90deg angles */
-  -moz-transform: rotate(-90deg) translateX(-189px);
-}
-}
+
+
 
 
 /* END Keyframes for the initial animation */
