@@ -678,6 +678,17 @@ a:active {
     stroke-dashoffset: 401;
   }
 }
+
+
+@media screen and (max-width: 800px) {
+  .outer {
+  
+  /* firefox bug fix - won't rotate at 90deg angles */
+  -moz-transform: rotate(-90deg) translateX(-243px);
+}
+}
+
+
 /* END Keyframes for the initial animation */
 
 /*CONTACT ME */
@@ -714,7 +725,6 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-width: 100%;
 color: #161717;
 }
 
