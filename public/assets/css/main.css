@@ -507,10 +507,7 @@ a:active {
   color: #131313;
   font-size: 3rem;
   text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem;
 }
 
 .chart figcaption {
@@ -562,7 +559,7 @@ a:active {
   -webkit-animation-play-state: running;
   
   /* firefox bug fix - won't rotate at 90deg angles */
-  -moz-transform: rotate(-90deg) translateX(-240px);
+  -moz-transform: rotate(-90deg) translateX(-190px);
 }
 
 .chart:hover .outer {
@@ -684,7 +681,7 @@ a:active {
   .outer {
   
   /* firefox bug fix - won't rotate at 90deg angles */
-  -moz-transform: rotate(-90deg) translateX(-243px);
+  -moz-transform: rotate(-90deg) translateX(-189px);
 }
 }
 
