@@ -331,15 +331,14 @@ a:active {
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   
   .TheContainer {
     width: 80%;
-    margin-left: 10%;
   }
   
   p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   
     #my-img:before {
@@ -381,7 +380,7 @@ a:active {
       padding-right: 3rem;
     }
     
-  .sidenav {
+ /* .sidenav {
     width: 15%;
     margin-left: 1rem;
   }
@@ -389,9 +388,10 @@ a:active {
     font-size: 18px;
     text-align: center;
     
-  }
+  }*/
   
- 
+  
+  
   
 }
 
@@ -446,7 +446,7 @@ a:active {
     display: none;
   }
 
-@media only screen and (max-device-width : 640px) {
+@media screen and (max-device-width : 640px) {
   .mobileMenu {
     display: block;
   }
@@ -456,7 +456,7 @@ a:active {
   }
 }
 
-@media only screen and (max-device-width: 768px) {
+@media screen and (max-device-width: 768px) {
 .mobileMenu {
     display: block;
   }
@@ -468,4 +468,19 @@ a:active {
   .TheContainer {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 800px) {
+  .mobileMenu {
+    display: block;
+  }
+  
+  .sidenav {
+    display: none;
+}
+
+.TheContainer {
+    width: 100%;
+  }
+
 }
