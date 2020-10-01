@@ -11,6 +11,8 @@
         "test": "mocha --recursive tests"
     },
     "dependencies": {
-        "bootstrap": "^4.5.2"
+        "axios": "^0.16.2",
+        "bootstrap": "^4.5.2",
+        "fetch": "^1.1.0"
     }
 }
