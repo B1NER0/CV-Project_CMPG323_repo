@@ -23,7 +23,7 @@ canvas.height = window.innerHeight;
 ctx.fillStyle = '#000';
 ctx.fillRect(0, 0, w, h);
 
-const cols = Math.floor(w / 3) + 1;
+const cols =(w / 3) + 1;
 const ypos = Array(cols).fill(0);
 
 function matrix () {
@@ -102,6 +102,15 @@ function myFunction() {
   }
 } 
 
+
+//var ht = new XMLHttpRequest();
+  
+//  ht.open("GET", "https://api.nasa.gov/planetary/apod?api_key=zuOehZm6hq1Rt9cufqw36ADo0kZT3mfq5dGmCPNo");
+//  ht.send(null);
+  
+ // console.log(ht.responseText);
+  
+  
 setInterval(matrix, 50);
  
 
