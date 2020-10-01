@@ -18,7 +18,7 @@ function getNasa () { //USING XMLHttpRequest
     
     var getYear = "date=" + year + "-" + month + "-" + day;
     
-    https.open("GET", "https://api.nasa.gov/planetary/apod?api_key=zuOehZm6hq1Rt9cufqw36ADo0kZT3mfq5dGmCPNo" + "&" + getYear);
+    https.open("GET", "https://api.nasa.gov/planetary/apod?api_key=zuOehZm6hq1Rt9cufqw36ADo0kZT3mfq5dGmCPNo");
     https.send();
   
     https.onload = () => {
