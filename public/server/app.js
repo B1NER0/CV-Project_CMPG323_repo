@@ -38,5 +38,4 @@ function getNasa () { //USING XMLHttpRequest
     nasaImg.style.height = 'auto';
     
   }
-  
 }
