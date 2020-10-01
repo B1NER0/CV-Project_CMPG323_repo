@@ -1,39 +1,28 @@
+
+import fetch from 'cross-fetch';
 let https = new XMLHttpRequest();
 
 var nasaImg = document.getElementById('nasaImg');
 var nasaDate = document.getElementById('dateNasa');
 var nasaBtn = document.getElementById('nasabtn');
 
+
 nasaBtn.onclick = function () {
   
-    
-    https.open("GET", "https://api.nasa.gov/planetary/apod?api_key=zuOehZm6hq1Rt9cufqw36ADo0kZT3mfq5dGmCPNo", false);
-  //  https.setRequestHeader('Authorization', 'Bearer ' + 'zuOehZm6hq1Rt9cufqw36ADo0kZT3mfq5dGmCPNo')
-    
-  
-    https.onreadystatechange = () => {
-      
-    if(https.status == 200 && https.readyState == 4)
-      
-      {
-        var vals = JSON.parse(https.response);
-        
-        console.log(vals);
-    console.log(vals["url"]);
-    console.log(vals["explanation"]);
-    
-    nasaImg.src = vals["url"];
-    nasaImg.style.width = '500px';
-    nasaImg.style.height = 'auto';
-      }
-    else{
-      console.log(`error ${https.status} ${https.statusText}`);
+   fetch('https://api.nasa.gov/planetary/apod?api_key=zuOehZm6hq1Rt9cufqw36ADo0kZT3mfq5dGmCPNo')
+  .then(res => {
+    if (res.status >= 400) {
+      throw new Error("Bad response from server");
     }
     
-    
-}
-
-https.send(null);
+    return res.json();
+  })
+  .then(user => {
+    console.log(user);
+  })
+  .catch(err => {
+    console.error(err);
+  });
 }
 
 function getNasa () { //USING XMLHttpRequest
