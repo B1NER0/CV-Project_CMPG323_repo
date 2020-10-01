@@ -23,7 +23,7 @@ canvas.height = window.innerHeight;
 ctx.fillStyle = '#000';
 ctx.fillRect(0, 0, w, h);
 
-const cols = Math.floor(w / 3) + 1;
+var cols = Math.floor(w / 3) + 1;
 const ypos = Array(cols).fill(0);
 
 function matrix () {
