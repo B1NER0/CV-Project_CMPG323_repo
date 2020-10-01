@@ -7,25 +7,30 @@ var nasaBtn = document.getElementById('nasabtn');
 nasaBtn.onclick = function () {
   
     
-    https.open("GET", "https://api.nasa.gov/planetary/apod?api_key=zuOehZm6hq1Rt9cufqw36ADo0kZT3mfq5dGmCPNo", true);
+    https.open("GET", "https://api.nasa.gov/planetary/apod?api_key=zuOehZm6hq1Rt9cufqw36ADo0kZT3mfq5dGmCPNo", false);
   //  https.setRequestHeader('Authorization', 'Bearer ' + 'zuOehZm6hq1Rt9cufqw36ADo0kZT3mfq5dGmCPNo')
     
   
     https.onreadystatechange = () => {
       
-    if(https.status == 200 && https.readyState == 4){
-      var vals = JSON.parse(https.response);
-    }else{
-      console.log(`error ${https.status} ${https.statusText}`);
-    }
-    
-    console.log(vals);
+    if(https.status == 200 && https.readyState == 4)
+      
+      {
+        var vals = JSON.parse(https.response);
+        
+        console.log(vals);
     console.log(vals["url"]);
     console.log(vals["explanation"]);
     
     nasaImg.src = vals["url"];
     nasaImg.style.width = '500px';
     nasaImg.style.height = 'auto';
+      }
+    else{
+      console.log(`error ${https.status} ${https.statusText}`);
+    }
+    
+    
 }
 
 https.send(null);
