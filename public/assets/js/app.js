@@ -3,6 +3,7 @@ let https = new XMLHttpRequest();
 var nasaImg = document.getElementById('nasaImg');
 var nasaDate = document.getElementById('dateNasa');
 var nasaBtn = document.getElementById('nasabtn');
+var loadingImg = document.getElementById('loadingImg');
 
 
   if(nasaDate.value == "")
@@ -10,15 +11,17 @@ var nasaBtn = document.getElementById('nasabtn');
     let today = new Date().toISOString().substr(0,10);
     nasaDate.value = today;
   }
-
-   
   
-
-
+  loadingImg.style.display = 'none';
+  loadingImg.style.width= '30px';
 
 nasaBtn.onclick = function () {
 
 //function getNasa () { //USING XMLHttpRequest
+  
+  loadingImg.style.display = 'block';
+   nasaImg.style.display = 'none';
+
   
    if(nasaDate.value == "")
     {
@@ -41,6 +44,13 @@ nasaBtn.onclick = function () {
       
     if(https.status === 200){
       var vals = JSON.parse(https.response);
+      nasaImg.style.display = 'block';
+      nasaImg.src = vals["url"];
+      nasaImg.style.height = 'auto';
+      nasaImg.style.width = '400px';
+      
+      
+      
     }else{
       console.log(`error ${https.status} ${https.statusText}`);
     }
@@ -48,10 +58,8 @@ nasaBtn.onclick = function () {
    // console.log(vals);
    // console.log(vals["url"]);
    // console.log(vals["explanation"]);
+    loadingImg.style.display = 'none';
     
-    nasaImg.src = vals["url"];
-    nasaImg.style.width = '400px';
-    nasaImg.style.height = 'auto';
     
   }
 }
