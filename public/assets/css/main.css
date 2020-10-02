@@ -759,10 +759,6 @@ color: #161717;
   height: 500px;
 }
 
-#nasaImg {
-  background: url('assets/img/loading.gif') no-repeat;
-  display: block;
-}
 
 
 [type="date"] {
