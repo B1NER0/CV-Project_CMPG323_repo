@@ -798,6 +798,7 @@ color: #161717;
     background-attachment: scroll;
     height: 40rem;
     width: auto;
+    background-size: contain;
   }
 }
 
