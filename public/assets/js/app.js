@@ -4,6 +4,7 @@ var nasaImg = document.getElementById('nasaImg');
 var nasaDate = document.getElementById('dateNasa');
 var nasaBtn = document.getElementById('nasabtn');
 var loadingImg = document.getElementById('loadingImg');
+var img = document.getElementById('TheNasaImgPar');
 
 let today = new Date().toISOString().substr(0,10);
   
@@ -25,11 +26,11 @@ function getNasa (date) {
 
 //function getNasa () { //USING XMLHttpRequest
   
-  loadingImg.style.display = 'block';
-   nasaImg.style.display = 'none';
-   nasaImg.src = '';
+  //img.style.backgroundImage = 'block';
+  // nasaImg.style.display = 'none';
+  // nasaImg.src = '';
 
-  
+  loadingImg.style.display = 'block';
    if(date == "")
     {
       let today = new Date().toISOString().substr(0,10);
@@ -56,11 +57,12 @@ function getNasa (date) {
       
     if(https.status === 200){
       var vals = JSON.parse(https.response);
-      nasaImg.style.display = 'block';
-      nasaImg.src = vals["url"];
-      nasaImg.style.height = 'auto';
-      nasaImg.style.width = '400px';
-      
+      //img.style.display = 'block';
+      img.style.backgroundImage = "url("+ vals["url"] + ")";
+    //  nasaImg.src = vals["url"];
+     // nasaImg.style.height = 'auto';
+    //  nasaImg.style.width = '100%';
+     
       
     }else{
       console.log(`error ${https.status} ${https.statusText}`);
