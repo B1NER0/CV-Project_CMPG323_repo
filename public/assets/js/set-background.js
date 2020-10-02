@@ -4,7 +4,7 @@
 //body.className = "heaven-" + idx;
 
 
-/*var request = new XMLHttpRequest()
+var request = new XMLHttpRequest()
 
 request.open('GET', 'https://api.nasa.gov/planetary/apod?api_key=zuOehZm6hq1Rt9cufqw36ADo0kZT3mfq5dGmCPNo', true)
 request.onload = function () {
@@ -27,7 +27,7 @@ var nasaImg = document.getElementById('nasaImg');
 }
 
 request.send()
-*/
+
 
 
 
