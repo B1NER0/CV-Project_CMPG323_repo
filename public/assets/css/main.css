@@ -752,8 +752,6 @@ color: #161717;
 /*NASA DATE PICKER PICTURE */
 
 .NASA {
-  height: 200rem;
-  max-height: 150rem;
   display: block;
   align-items: center;
   margin-top: 2rem;
@@ -786,12 +784,19 @@ color: #161717;
 }
 
 #TheNasaImgPar {
+  
+  height: 80rem;
   padding-top: 2rem;
-  height: 50%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-device-width: 800px) {
+  #TheNasaImgPar {
+    background-attachment: scroll;
+  }
 }
 
 [type="date"] {
