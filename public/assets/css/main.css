@@ -793,9 +793,11 @@ color: #161717;
   background-size: cover;
 }
 
-@media only screen and (max-device-width: 800px) {
+@media only screen and (max-width: 600px) {
   #TheNasaImgPar {
     background-attachment: scroll;
+    height: 40rem;
+    width: auto;
   }
 }
 
