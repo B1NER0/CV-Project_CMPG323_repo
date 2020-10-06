@@ -10,6 +10,14 @@
     <link href="assets/css/gradients.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+    
 </head>
 
 <body>
@@ -308,12 +316,39 @@
             <div id="TheNasaImgPar">
                 
             </div>
-            
-            
-
-            
         </div>
         
+        
+        <div class="wrapLoc">
+            <center>  <h1>Your current location</h1></center>
+        <div class="location">
+          
+            
+            <div class="locContainter">
+                
+                <img src="assets/img/home.png" width="50px" height="auto" id="imgHome">
+            
+                <label value="temp" id="lblCity">temp</label>
+                
+            </div>
+            
+            <div class="locContainter">
+                
+                <img src="assets/img/earth.png" width="50px" height="auto" id="imgEarth">
+            
+                <label value="temp" id="lblEarth">temp</label>
+                
+            </div>
+            
+            </div>
+            </div>
+            
+            <div id="mapid"></div>
+          
+        
+            
+            
+       
         
         
         
@@ -341,7 +376,8 @@
     
   </div>
 </section> 
-     
+
+
     <script src="assets/js/set-background.js"></script>
     <script src="assets/js/app.js"></script>
     

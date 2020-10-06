@@ -834,3 +834,36 @@ input {
   box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
   width: 190px;
 }
+
+/*MAPS*/
+
+#mapid {
+  height: 300px;
+}
+
+.location {
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.locContainter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  width: 10%;
+}
+
+
+.wrapLoc {
+   display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+

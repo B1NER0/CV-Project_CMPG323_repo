@@ -37,6 +37,8 @@ request.send() */
 
 
 
+
+
 // Get the canvas node and the drawing context
 const canvas = document.getElementById('matrix-hero');
 const ctx = canvas.getContext('2d');
