@@ -6,13 +6,13 @@
     "devDependencies": {
         "unit.js": "2.0.0"
     },
-    "scripts": {
-    },
+    "scripts": {},
     "dependencies": {
         "@sendgrid/mail": "^7.2.6",
         "axios": "^0.16.2",
         "bootstrap": "^4.5.2",
         "fetch": "^1.1.0",
-        "leaflet": "^1.7.1"
+        "leaflet": "^1.7.1",
+        "navigator": "^1.0.1"
     }
 }

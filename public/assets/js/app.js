@@ -80,9 +80,10 @@ function getNasa (date) {
 }
 }
 
+/*
 var theIP;
-var lat;
-var long;
+var lat = -26.367;
+var long = 27.4025;
 var city = "Potcehfstroom";
 var country = "South Africa";
 var state;
@@ -91,6 +92,30 @@ var imgHome = document.getElementById('imgHome');
 var imgEarth = document.getElementById('imgEarth');
 var lblHome = document.getElementById('lblCity');
 var lblEarth = document.getElementById('lblEarth');
+
+
+var xmlhttp = new XMLHttpRequest();
+var ip_address = '196.252.171.126';
+var auth = '853766cd-c1ae-4157-a700-1e13f2f0fbfe';
+var url = "https://ipfind.co/?auth=" + auth + "&ip=" + ip_address;
+
+xmlhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+      var result = JSON.parse(this.responseText);
+     // console.log(result);
+    }
+};
+
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+var ds = xmlhttp.response ;
+console.log(ds);
+
+
+   
+
+
 
 
 
@@ -111,127 +136,94 @@ locHttp.open("GET", "https://api.ipgeolocation.io/ipgeo?apiKey=915847f6671c41979
         state = locRes["state_prov"];
         country = locRes["country_name"];
         
-        lblHome.innerHTML = city + "<br><center>" + state + "</center>";
-        lblEarth.innerHTML = "<center>" + country + "</center>";
+      //  lblHome.innerHTML = city + "<br><center>" + state + "</center>";
+       // lblEarth.innerHTML = "<center>" + country + "</center>";
         
-        var map = L.map('mapid').setView([lat, long], 13);
+      //  var map = L.map('mapid').setView([-26.6928, 27.0925], 13);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-        
-        L.marker([lat, long]).addTo(map)
-            .bindPopup('You are here')
-            .openPopup();
+       // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+       //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+       // }).addTo(map);
+      //  
+      //  L.marker([-26.6928, 27.0925]).addTo(map)
+      //      .bindPopup('You are here')
+      //      .openPopup();
         
     }else{
       console.log(`error ${locHttp.status} ${locHttp.statusText}`);
     }
 }
-    
-
-
-
-
-
-//fetch(url)
- // .then(response => response.json())
-  //.then(commits => console.log(commits));
+ */
+ 
+ 
+function getLocation() {
   
+    var city = "Potcehfstroom";
+    var country = "South Africa";
+    var state;
+    
+    var imgHome = document.getElementById('imgHome');
+    var imgEarth = document.getElementById('imgEarth');
+    var lblHome = document.getElementById('lblCity');
+    var lblEarth = document.getElementById('lblEarth');
   
 
-
-
-
-/*
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'your.mapbox.access.token'
-}).addTo(mymap);
-
-//weather api
-
-
-
-let wet = new XMLHttpRequest();
-
-const lat = 45.7;
-const lng = -6.0;
-//const params = [
- // 'airTemperature', 'cloudCover',
- // 'gust', 'humidity', 'precipitation',
- // 'snowDepth', 'visiblity', 'windDirection',
- // 'windSpeed'
-//].join(',');
-
-const par = "airTemperature";
-
-wet.open("GET","https://api.stormglass.io/v2/weather/point?lat=45.7&lng=-6.0&params=airTemperature");
-
-wet.setRequestHeader('Authorization', '534fd578-079d-11eb-af9a-0242ac130002-534fd64a-079d-11eb-af9a-0242ac130002');
-wet.send();
-
-wet.onload = () => {
+    function onError() {
+        lblHome.innerHTML = 'Unable to locate you';
+        lblEarth.innerHTML = 'Unable to locate you';
+      }
       
-    if(wet.status === 200){
-      var val = JSON.parse(wet.response);
+    function onSuccess(position) {
+        console.log(`Latitude: ${position.coords.latitude} °, Longitude: ${position.coords.longitude} °`);
+        
+        var apiLoc = position.coords.latitude + "," + position.coords.longitude;
+        
+        let locHttp = new XMLHttpRequest();
+        locHttp.open("GET", "https://api.opencagedata.com/geocode/v1/json?q="+apiLoc+"&key=4bfc55aa57c74a0d9a4a945bff871ce0");
+            locHttp.send();
+          
+            locHttp.onload = () => {
       
-    console.log(val);
-     
-      
-    }else{
-      console.log(`error ${wet.status} ${wet.statusText}`);
-    }
-
-
-}
-
-
-
-
-
-
-
-
-
-*/
+            if(locHttp.status === 200){
+                
+                var locResults = JSON.parse(locHttp.response)
+                var theRes = locResults["results"][0]["components"];
+                //console.log(theRes);
+                
+                lblHome.innerHTML = theRes["county"] + "<br><center>" + theRes["state"] + "</center>";
+                lblEarth.innerHTML = theRes["country"];
+                
+                
+            }else{
+                console.log(`error ${locHttp.status} ${locHttp.statusText}`);
+            }
+        
+        
+        }
+        
+        var map = L.map('mapid').setView([position.coords.latitude, position.coords.longitude], 13);
     
-
-
-//Email
-
-
-var emailBtn = document.getElementById('emailBtn');
-
-
-function sendEmail(){
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        L.marker([position.coords.latitude, position.coords.longitude]).addTo(map)
+            .bindPopup('You are here')
+            .openPopup();
+       
     
-    const sgMail = require('@sendgrid/mail')
-    sgMail.setApiKey("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")
-    const msg = {
-      to: 'degenaarp@gmail.com', // Change to your recipient
-      from: 'hummingwebdesign@gmail.com', // Change to your verified sender
-      subject: 'Sending with SendGrid is Fun',
-      text: 'and easy to do anywhere, even with Node.js',
-      html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-    }
-    sgMail
-      .send(msg)
-      .then(() => {
-        console.log('Email sent')
-      })
-      .catch((error) => {
-        console.error(error)
-      })
-    
-}
-
-emailBtn.onclick = function () {
-    sendEmail();
   }
+
+  if (!navigator.geolocation) {
+    // This browser doesn't support Geolocation, show an error
+    onError();
+  } else {
+    // Get the current position of the user!
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  }
+  
+  
+  
+}
+
+getLocation();
