@@ -837,6 +837,14 @@ input {
 
 /*MAPS*/
 
+.wrapLoc {
+   display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+
 #mapid {
   height: 300px;
 }
@@ -868,11 +876,5 @@ input {
 }
 
 
-.wrapLoc {
-   display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
 
 
