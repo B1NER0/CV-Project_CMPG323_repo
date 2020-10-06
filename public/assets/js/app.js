@@ -236,3 +236,38 @@ function getLocation() {
 }
 
 getLocation();
+
+
+//Superhero api
+
+var combat = document.getElementById('combat');
+var durable = document.getElementById('durable');
+var speed = document.getElementById('speed');
+var intel = document.getElementById('intel');
+var strength = document.getElementById('strength');
+var power = document.getElementById('power');
+var supName = document.getElementById('supName');
+
+
+
+
+let supHttp = new XMLHttpRequest();
+supHttp.open("GET", "https://gateway.marvel.com:443/v1/public/characters?name=Spider-Man&apikey=0f842d9cf22f8dbcc6941093d1cd4150&hash=be31f2533485ef78cb2b6a661ae6cb32");//3361451440637188/60");
+    supHttp.send();
+  
+    supHttp.onload = () => {
+      
+    if(supHttp.status === 200){
+        var supRes = JSON.parse(supHttp.response);
+        
+        console.log(supRes);
+        
+      //  lblHome.innerHTML = city + "<br><center>" + state + "</center>";
+       // lblEarth.innerHTML = "<center>" + country + "</center>";
+        
+      
+        
+    }else{
+      console.log(`error ${supHttp.status} ${supHttp.statusText}`);
+    }
+    }
