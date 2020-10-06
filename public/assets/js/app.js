@@ -81,8 +81,8 @@ function getNasa (date) {
 }
 
 var theIP;
-var lat = -26.69300;
-var long = 27.08720;
+var lat;
+var long;
 var city = "Potcehfstroom";
 var country = "South Africa";
 var state;
@@ -114,6 +114,16 @@ locHttp.open("GET", "https://api.ipgeolocation.io/ipgeo?apiKey=915847f6671c41979
         lblHome.innerHTML = city + "<br><center>" + state + "</center>";
         lblEarth.innerHTML = "<center>" + country + "</center>";
         
+        var map = L.map('mapid').setView([lat, long], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        L.marker([lat, long]).addTo(map)
+            .bindPopup('You are here')
+            .openPopup();
+        
     }else{
       console.log(`error ${locHttp.status} ${locHttp.statusText}`);
     }
@@ -131,15 +141,7 @@ locHttp.open("GET", "https://api.ipgeolocation.io/ipgeo?apiKey=915847f6671c41979
   
 
 
-var map = L.map('mapid').setView([lat, long], 13);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-L.marker([lat, long]).addTo(map)
-    .bindPopup('You are here')
-    .openPopup();
 
 /*
 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
