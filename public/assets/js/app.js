@@ -92,7 +92,7 @@ var imgEarth = document.getElementById('imgEarth');
 var lblHome = document.getElementById('lblCity');
 var lblEarth = document.getElementById('lblEarth');
 
-lblHome.innerHTML = city + "<br><center>North-West</center>";
+lblHome.innerHTML = city + "<br><center>North-West";
 lblEarth.innerHTML = country
 
 

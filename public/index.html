@@ -10,6 +10,13 @@
     <link href="assets/css/gradients.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
 </head>
 
 <body>
@@ -296,20 +303,47 @@
     <section class="APIS">
         
         <div class="NASA">
-            <h2>Get the picture of the day from NASA</h2>
-            <label for="dateNasa">Date Of Picture</label>
+            <div class="theDate">
+            <h1>Get the Picture of the Day from NASA</h1>
+            <label for="dateNasa">Search by date</label>
             <input type="date" name="dateNasa" id="dateNasa">
            <!-- <button onclick="getNasa()">Go</button> -->
-           <button id="nasabtn">Go</button>
+           <button id="nasabtn" value="2020-06-08">Go</button>
+           <img src="assets/img/loading.gif" id="loadingImg">
+           </div>
             
-            <img src="" id="nasaImg">
-            
-            
-            
+            <div id="TheNasaImgPar">
+                
+            </div>
         </div>
         
         
-        
+        <div class="wrapLoc">
+            <center>  <h1>Your current location</h1></center>
+        <div class="location">
+          
+            
+            <div class="locContainter">
+                
+                <img src="assets/img/home.png" width="50px" height="auto" id="imgHome">
+            
+                <label value="temp" id="lblCity">temp</label>
+                
+            </div>
+            
+            <div class="locContainter">
+                
+                <img src="assets/img/earth.png" width="50px" height="auto" id="imgEarth">
+            
+                <label value="temp" id="lblEarth">temp</label>
+                
+            </div>
+            
+            </div>
+            </div>
+            
+            <div id="mapid"></div>
+          
         
         
     </section>
@@ -341,7 +375,7 @@
     
      
   <script src="assets/js/set-background.js"></script>
-  <script src="server/app.js"></script>
+  <script src="assets/js/app.js"></script>
     
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
