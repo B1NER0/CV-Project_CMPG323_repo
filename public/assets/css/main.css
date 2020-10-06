@@ -797,19 +797,14 @@ color: #161717;
 }
 
 @media only screen and (max-width: 800px) {
-  #TheNasaImgPar {
-    background-attachment: scroll;
-    height: 30rem;
-    width: auto;
-    background-size: contain !important;
-    padding: 1rem;
-  }
+  
 }
 
 [type="date"] {
   background:#fff; /*url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;*/
   
   min-height: 20px;
+  margin-top: 0.5rem;
   
 }
 [type="date"]::-webkit-inner-spin-button {
@@ -839,6 +834,10 @@ input {
   width: 190px;
 }
 
+.theDate h1 {
+  padding-bottom: 1.2rem;
+}
+
 /*MAPS*/
 
 .wrapLoc {
@@ -854,7 +853,9 @@ input {
   height: 40rem;
 }
 
-
+#enableLoc {
+  color: #e33c39;
+}
 
 .locationRow {
   height: 200px;
@@ -877,6 +878,20 @@ input {
   padding-bottom: 1rem;
   width: 50px;
   height: auto;
+}
+
+.locationSec {
+  padding-top: 3rem;
+}
+
+@media only screen and (max-device-width: 480px){
+  #TheNasaImgPar {
+    background-attachment: scroll;
+    height: 30rem;
+    width: auto;
+    background-size: contain !important;
+    padding: 1rem;
+  }
 }
 
 

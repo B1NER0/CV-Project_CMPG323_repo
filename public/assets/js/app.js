@@ -155,6 +155,10 @@ locHttp.open("GET", "https://api.ipgeolocation.io/ipgeo?apiKey=915847f6671c41979
 }
  */
  
+ var lblEna = document.getElementById('enableLoc');
+ 
+ //lblEna.style.display = "block";
+ 
  
 function getLocation() {
   
@@ -167,6 +171,18 @@ function getLocation() {
     var lblHome = document.getElementById('lblCity');
     var lblEarth = document.getElementById('lblEarth');
   
+  
+      if (!navigator.geolocation) {
+        // This browser doesn't support Geolocation, show an error
+        onError();
+      } else {
+        // Get the current position of the user!
+        //lblEna.style.display = "none";
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        
+      }
+      
+  
 
     function onError() {
         lblHome.innerHTML = 'Unable to locate you';
@@ -174,10 +190,10 @@ function getLocation() {
       }
       
     function onSuccess(position) {
-        console.log(`Latitude: ${position.coords.latitude} °, Longitude: ${position.coords.longitude} °`);
+        //console.log(`Latitude: ${position.coords.latitude} °, Longitude: ${position.coords.longitude} °`);
         
         var apiLoc = position.coords.latitude + "," + position.coords.longitude;
-        
+        lblEna.style.display = "none";
         let locHttp = new XMLHttpRequest();
         locHttp.open("GET", "https://api.opencagedata.com/geocode/v1/json?q="+apiLoc+"&key=4bfc55aa57c74a0d9a4a945bff871ce0");
             locHttp.send();
@@ -214,13 +230,6 @@ function getLocation() {
     
   }
 
-  if (!navigator.geolocation) {
-    // This browser doesn't support Geolocation, show an error
-    onError();
-  } else {
-    // Get the current position of the user!
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
-  }
   
   
   
