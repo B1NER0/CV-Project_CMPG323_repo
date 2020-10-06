@@ -797,7 +797,8 @@ color: #161717;
     background-attachment: scroll;
     height: 30rem;
     width: auto;
-    background-size: contain;
+    background-size: contain !important;
+    padding: 1rem;
   }
 }
 
@@ -838,6 +839,11 @@ input {
 
 #mapid {
   height: 300px;
+}
+
+.theMap {
+  height: 300px;
+  width: 100%;
 }
 
 .location {

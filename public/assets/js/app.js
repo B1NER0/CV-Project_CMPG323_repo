@@ -92,11 +92,10 @@ var imgEarth = document.getElementById('imgEarth');
 var lblHome = document.getElementById('lblCity');
 var lblEarth = document.getElementById('lblEarth');
 
-lblHome.innerHTML = city + "<br><center>North-West";
-lblEarth.innerHTML = country
 
 
-/*
+
+
 let locHttp = new XMLHttpRequest();
 locHttp.open("GET", "https://api.ipgeolocation.io/ipgeo?apiKey=915847f6671c4197986fa24a8765e90b");
     locHttp.send();
@@ -111,11 +110,15 @@ locHttp.open("GET", "https://api.ipgeolocation.io/ipgeo?apiKey=915847f6671c41979
         city = locRes["city"];
         state = locRes["state_prov"];
         country = locRes["country_name"];
+        
+        lblHome.innerHTML = city + "<br><center>" + state + "</center>";
+        lblEarth.innerHTML = "<center>" + country + "</center>";
+        
     }else{
       console.log(`error ${locHttp.status} ${locHttp.statusText}`);
     }
-    }
-   */ 
+}
+    
 
 
 
