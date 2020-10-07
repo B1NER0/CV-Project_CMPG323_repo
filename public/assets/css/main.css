@@ -939,14 +939,13 @@ align-items: center;
 #superImg {
   width: 35rem;
   height: auto;
-  position: relative;
-  text-align: center;
+ 
 }
 
 .supCont {
   display: flex;
 width: 70%;
-flex-direction: column;
+flex-direction: row;
 justify-content: center;
 align-items: center;
 margin-top: 2rem;
@@ -1003,6 +1002,10 @@ padding-left: 5rem;
 
 @media screen and (max-width: 1000px) {
   
+  .supCont{
+    flex-direction: row;
+  }
+  
    #superImg {
     width: 20rem;
     height: auto;
@@ -1028,6 +1031,9 @@ align-items: center;
 
 @media screen and (max-width: 800px) {
   
+  .supCont{
+    flex-direction: row;
+  }
    #superImg {width: 20rem;
     height: auto;
     

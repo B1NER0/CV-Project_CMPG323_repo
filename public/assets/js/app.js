@@ -234,3 +234,28 @@ let supHttp = new XMLHttpRequest();
       console.log(`error ${supHttp.status} ${supHttp.statusText}`);
     }
 }
+
+var btnEmail = document.getElementById('emailBtn');
+var emailL = document.getElementById('emailMes');
+var name = document.getElementById('fname');
+var email = document.getElementById('lemail');
+var sub = document.getElementById('subject');
+
+btnEmail.onclick = function(){
+   
+   name.value = "ASDFF";
+   
+   if(name||name.value)
+   {
+       console.log("NO");
+   }
+   else
+   {
+       console.log("YES");
+   }
+   
+   emailL.innerHTML = "Thanks for the email";
+   console.log("THEEMAIL");
+   
+    
+}
