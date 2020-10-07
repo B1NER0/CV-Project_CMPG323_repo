@@ -78,86 +78,15 @@ function getNasa (date) {
     loadingImg.style.display = 'none';
     
 }
+
+
 }
-
-/*
-var theIP;
-var lat = -26.367;
-var long = 27.4025;
-var city = "Potcehfstroom";
-var country = "South Africa";
-var state;
-
-var imgHome = document.getElementById('imgHome');
-var imgEarth = document.getElementById('imgEarth');
-var lblHome = document.getElementById('lblCity');
-var lblEarth = document.getElementById('lblEarth');
-
-
-var xmlhttp = new XMLHttpRequest();
-var ip_address = '196.252.171.126';
-var auth = '853766cd-c1ae-4157-a700-1e13f2f0fbfe';
-var url = "https://ipfind.co/?auth=" + auth + "&ip=" + ip_address;
-
-xmlhttp.onreadystatechange = function() {
-if (this.readyState == 4 && this.status == 200) {
-      var result = JSON.parse(this.responseText);
-     // console.log(result);
-    }
-};
-
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-
-var ds = xmlhttp.response ;
-console.log(ds);
-
-
-   
-
-
-
-
-
-
-
-let locHttp = new XMLHttpRequest();
-locHttp.open("GET", "https://api.ipgeolocation.io/ipgeo?apiKey=915847f6671c4197986fa24a8765e90b");
-    locHttp.send();
-  
-    locHttp.onload = () => {
-      
-    if(locHttp.status === 200){
-        var locRes = JSON.parse(locHttp.response);
-        theIP = locRes["ip"];
-        lat = locRes["latitude"];
-        long = locRes["longitude"];
-        city = locRes["city"];
-        state = locRes["state_prov"];
-        country = locRes["country_name"];
-        
-      //  lblHome.innerHTML = city + "<br><center>" + state + "</center>";
-       // lblEarth.innerHTML = "<center>" + country + "</center>";
-        
-      //  var map = L.map('mapid').setView([-26.6928, 27.0925], 13);
-
-       // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-       //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-       // }).addTo(map);
-      //  
-      //  L.marker([-26.6928, 27.0925]).addTo(map)
-      //      .bindPopup('You are here')
-      //      .openPopup();
-        
-    }else{
-      console.log(`error ${locHttp.status} ${locHttp.statusText}`);
-    }
-}
- */
  
  var lblEna = document.getElementById('enableLoc');
  
  //lblEna.style.display = "block";
+ 
+ 
  
  
 function getLocation() {
@@ -165,6 +94,9 @@ function getLocation() {
     var city = "Potcehfstroom";
     var country = "South Africa";
     var state;
+    
+    var mapShow = document.getElementById('mapid');
+    mapShow.style.height = "0";
     
     var imgHome = document.getElementById('imgHome');
     var imgEarth = document.getElementById('imgEarth');
@@ -217,6 +149,8 @@ function getLocation() {
         
         }
         
+        mapShow.style.height = "300px";
+        
         var map = L.map('mapid').setView([position.coords.latitude, position.coords.longitude], 13);
     
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -238,21 +172,26 @@ function getLocation() {
 getLocation();
 
 
+
+
 //Superhero api
 
-var combat = document.getElementById('combat');
-var durable = document.getElementById('durable');
-var speed = document.getElementById('speed');
-var intel = document.getElementById('intel');
-var strength = document.getElementById('strength');
-var power = document.getElementById('power');
+var comicl = document.getElementById('comic');
+var seriel = document.getElementById('serie');
+var eventl = document.getElementById('event');
+var storiel = document.getElementById('book');
+var strengthl = document.getElementById('strength');
 var supName = document.getElementById('supName');
-
+var supImage = document.getElementById('superImg');
 
 
 
 let supHttp = new XMLHttpRequest();
-supHttp.open("GET", "https://gateway.marvel.com:443/v1/public/characters?name=Spider-Man&apikey=0f842d9cf22f8dbcc6941093d1cd4150&hash=be31f2533485ef78cb2b6a661ae6cb32");//3361451440637188/60");
+    
+    var randomOfset = Math.floor(Math.random() * 1000);
+    console.log(randomOfset);
+    
+    supHttp.open("GET", "https://gateway.marvel.com:443/v1/public/characters?apikey=0f842d9cf22f8dbcc6941093d1cd4150&offset=" + randomOfset);
     supHttp.send();
   
     supHttp.onload = () => {
@@ -260,14 +199,35 @@ supHttp.open("GET", "https://gateway.marvel.com:443/v1/public/characters?name=Sp
     if(supHttp.status === 200){
         var supRes = JSON.parse(supHttp.response);
         
-        console.log(supRes);
+        var randomId = Math.floor(Math.random() * 20);  
         
-      //  lblHome.innerHTML = city + "<br><center>" + state + "</center>";
-       // lblEarth.innerHTML = "<center>" + country + "</center>";
+        var charID = randomId;
         
-      
+        var comics = supRes["data"]["results"][charID]["comics"]["available"];
+        var events = supRes["data"]["results"][charID]["events"]["available"];
+        var stories = supRes["data"]["results"][charID]["stories"]["available"];
+        var series = supRes["data"]["results"][charID]["series"]["available"];
+        var name = supRes["data"]["results"][charID]["name"];
+        var thumb = supRes["data"]["results"][charID]["thumbnail"]["path"];
+        var ex = supRes["data"]["results"][charID]["thumbnail"]["extension"];
+        
+     //   console.log("Events: " + events);
+      //  console.log("comics: " + comics);
+      //  console.log("stories: " + stories);
+      //  console.log("series: " + series);
+      //  console.log("Name: " + name);
+      //  console.log("Image: " + thumb + "."+ex);
+       
+        supImage.src = thumb + "."+ ex;
+        supName.innerHTML = name;
+        comicl.innerHTML = comics;
+        eventl.innerHTML = events;
+        storiel.innerHTML = stories;
+        seriel.innerHTML = series;
+        
+       // console.log(supRes);
         
     }else{
       console.log(`error ${supHttp.status} ${supHttp.statusText}`);
     }
-    }
+}
