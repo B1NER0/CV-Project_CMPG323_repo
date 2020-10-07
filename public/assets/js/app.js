@@ -186,7 +186,7 @@ var supName = document.getElementById('supName');
 
 var thumb = "assets/img/test";
 var ex = "jpg";
-var sup = document.getElementById("sup");
+var sup = document.getElementById("superImg");
 
 let supHttp = new XMLHttpRequest();
     

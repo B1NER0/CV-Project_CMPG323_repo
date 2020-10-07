@@ -918,7 +918,7 @@ input {
 .superCol1 {
 position: relative;
 min-height: 1px;
-width: 60%;
+width: 28%;
 padding-right: 0.5rem;
 display: flex;
 flex-direction: column;
@@ -929,7 +929,6 @@ align-items: center;
 position: relative;
 box-sizing: border-box;
 width: 40%;
-padding-top: 2.3rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -937,14 +936,22 @@ align-items: center;
 }
 
 #superImg {
-  width: 35rem;
-  height: auto;
+  width: auto;
+  height: 30rem;
  
+}
+
+.superCol2 h2 {
+  
+  color: #2291A3;
+  font-weight: 400;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
 }
 
 .supCont {
   display: flex;
-width: 70%;
 flex-direction: row;
 justify-content: center;
 align-items: center;
@@ -962,7 +969,6 @@ margin-top: 2rem;
 .statMainRow {
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
   justify-content: center;
   align-content: center;
 }
@@ -1002,8 +1008,13 @@ padding-left: 5rem;
 
 @media screen and (max-width: 1000px) {
   
+  .superCol2 h2 {
+    padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+  
   .supCont{
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
   }
   
@@ -1031,9 +1042,13 @@ align-items: center;
 }
 
 @media screen and (max-width: 800px) {
+  .superCol2 h2 {
+    padding-top: 2rem;
+  padding-bottom: 1rem;
+}
   
   .supCont{
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
   }
    #superImg {width: 20rem;
