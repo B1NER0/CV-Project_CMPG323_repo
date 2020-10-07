@@ -1,8 +1,6 @@
 
 
 
-let https = new XMLHttpRequest();
-
 var nasaImg = document.getElementById('nasaImg');
 var nasaDate = document.getElementById('dateNasa');
 var nasaBtn = document.getElementById('nasabtn');
@@ -53,6 +51,8 @@ function getNasa (date) {
     
     var getYear = "date=" + year + "-" + month + "-" + day;
     
+    let https = new XMLHttpRequest();
+
     https.open("GET", "https://api.nasa.gov/planetary/apod?api_key=zuOehZm6hq1Rt9cufqw36ADo0kZT3mfq5dGmCPNo" + "&" + getYear);
     https.send();
   
@@ -182,10 +182,11 @@ var eventl = document.getElementById('event');
 var storiel = document.getElementById('book');
 var strengthl = document.getElementById('strength');
 var supName = document.getElementById('supName');
-var supImage = document.getElementById('superImg');
+//var supImage = document.getElementById('superImg');
 
 var thumb = "assets/img/test";
 var ex = "jpg";
+var sup = document.getElementById("sup");
 
 let supHttp = new XMLHttpRequest();
     
@@ -204,6 +205,8 @@ let supHttp = new XMLHttpRequest();
         var supRes = JSON.parse(supHttp.response);
         var randomId = Math.floor(Math.random() * 20);  
         
+        console.log(supRes);
+        
         var charID = randomId;
         
         var comics = supRes["data"]["results"][charID]["comics"]["available"];
@@ -219,11 +222,11 @@ let supHttp = new XMLHttpRequest();
       //  console.log("stories: " + stories);
       //  console.log("series: " + series);
       //  console.log("Name: " + name);
-      //  console.log("Image: " + thumb + "."+ex);
+       console.log("Image: " + thumb + "."+ex);
        
       
-        
-        supImage.src = thumb + "."+ ex;
+      //  html.push(`<img src='${res.multimedia[4].url}'/>`)
+        sup.src = thumb + "."+ ex;
         supName.innerHTML = name;
         comicl.innerHTML = comics;
         eventl.innerHTML = events;
