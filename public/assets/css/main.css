@@ -943,6 +943,15 @@ align-items: center;
   text-align: center;
 }
 
+.supCont {
+  display: flex;
+width: 70%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 2rem;
+}
+
 #supName {
   color: #2291A3;
   font-weight: 400;
