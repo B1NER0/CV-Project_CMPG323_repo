@@ -983,8 +983,8 @@ align-items: center;
 @media screen and (max-width: 1000px) {
   
    #superImg {
-    width: 20rem;
-    height: auto;
+     width: 50px;
+     height: auto;
 
   }
   .superCol1 {
@@ -1003,9 +1003,8 @@ align-items: center;
 @media screen and (max-width: 800px) {
   
    #superImg {
-    width: 20rem;
-    height: auto;
-
+width: 50px;
+     height: auto;
   }
   .superCol1 {
     width: 100%;
