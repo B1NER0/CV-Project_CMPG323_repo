@@ -1035,3 +1035,67 @@ align-items: center;
   align-content: center;
 }
 }
+
+
+/*CV DOWNLOAD */
+
+.cvDownload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#btnDownload {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  background-color: #2291A3;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+#btnDownload:hover {
+  cursor: pointer;
+}
+
+.stage {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box {
+        align-self: flex-end;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+       padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      padding-right: 1.2rem;
+      padding-left: 1.2rem;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      background-color: #2291A3;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      transform-origin: bottom;
+    }
+    .bounce-3 {
+        animation-name: bounce-3;
+        animation-timing-function: ease;
+    }
+    @keyframes bounce-3 {
+        0%   { transform: translateY(0); }
+        30%  { transform: translateY(-10px); }
+        50%  { transform: translateY(0); }
+        100% { transform: translateY(0); }
+    }

@@ -188,13 +188,13 @@ var supImage = document.getElementById('superImg');
 
 let supHttp = new XMLHttpRequest();
     
-    //var randomOfset = Math.floor(Math.random() * 1000);
+    var randomOfset = Math.floor(Math.random() * 1000);
     //console.log(randomOfset);
     
     
     
     
-    supHttp.open("GET", "https://gateway.marvel.com:443/v1/public/characters?apikey=0f842d9cf22f8dbcc6941093d1cd4150");//&offset=" + randomOfset);
+    supHttp.open("GET", "https://gateway.marvel.com:443/v1/public/characters?apikey=0f842d9cf22f8dbcc6941093d1cd4150&offset=" + randomOfset);
     supHttp.send();
   
     supHttp.onload = () => {
@@ -204,7 +204,7 @@ let supHttp = new XMLHttpRequest();
         
         var randomId = Math.floor(Math.random() * 20);  
         
-        var charID = 17;
+        var charID = randomId;
         
         var comics = supRes["data"]["results"][charID]["comics"]["available"];
         var events = supRes["data"]["results"][charID]["events"]["available"];
@@ -221,10 +221,7 @@ let supHttp = new XMLHttpRequest();
       //  console.log("Name: " + name);
       //  console.log("Image: " + thumb + "."+ex);
        
-       if((thumb + "."+ex) == "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg")
-       console.log("TES IT DOES");
-       
-       
+      
         supImage.src = thumb + "."+ ex;
         supName.innerHTML = name;
         comicl.innerHTML = comics;
