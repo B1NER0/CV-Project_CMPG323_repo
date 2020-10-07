@@ -184,7 +184,8 @@ var strengthl = document.getElementById('strength');
 var supName = document.getElementById('supName');
 var supImage = document.getElementById('superImg');
 
-
+var thumb = "assets/img/test";
+var ex = "jpg";
 
 let supHttp = new XMLHttpRequest();
     
@@ -221,6 +222,7 @@ let supHttp = new XMLHttpRequest();
       //  console.log("Image: " + thumb + "."+ex);
        
       
+        
         supImage.src = thumb + "."+ ex;
         supName.innerHTML = name;
         comicl.innerHTML = comics;
@@ -234,6 +236,7 @@ let supHttp = new XMLHttpRequest();
       console.log(`error ${supHttp.status} ${supHttp.statusText}`);
     }
 }
+
 
 var btnEmail = document.getElementById('emailBtn');
 var emailL = document.getElementById('emailMes');

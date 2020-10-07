@@ -1004,6 +1004,7 @@ padding-left: 5rem;
   
   .supCont{
     flex-direction: row;
+    width: 100%;
   }
   
    #superImg {
@@ -1033,6 +1034,7 @@ align-items: center;
   
   .supCont{
     flex-direction: row;
+    width: 100%;
   }
    #superImg {width: 20rem;
     height: auto;
