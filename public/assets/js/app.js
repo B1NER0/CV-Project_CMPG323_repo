@@ -189,7 +189,7 @@ var supImage = document.getElementById('superImg');
 let supHttp = new XMLHttpRequest();
     
     var randomOfset = Math.floor(Math.random() * 1000);
-    console.log(randomOfset);
+    //console.log(randomOfset);
     
     supHttp.open("GET", "https://gateway.marvel.com:443/v1/public/characters?apikey=0f842d9cf22f8dbcc6941093d1cd4150&offset=" + randomOfset);
     supHttp.send();

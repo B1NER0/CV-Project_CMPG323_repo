@@ -980,12 +980,30 @@ align-items: center;
   padding-left: 3rem;
 }
 
-
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   
    #superImg {
-    width: 15rem;
+    width: 20rem;
+    height: auto;
+
+  }
+  .superCol1 {
+    width: 100%;
+  }
+  
+  .superCol2 {
+    width: 100%;
+  }
+  
+  .superRow {
+  flex-direction: column;
+}
+}
+
+@media screen and (max-width: 800px) {
+  
+   #superImg {
+    width: 20rem;
     height: auto;
 
   }
