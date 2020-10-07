@@ -978,3 +978,12 @@ align-items: center;
 .stat2 {
   padding-left: 3rem;
 }
+
+@media only screen and (max-device-width: 480px){
+  
+    #superImg {
+    width: 15rem;
+    height: auto;
+
+  }
+}
