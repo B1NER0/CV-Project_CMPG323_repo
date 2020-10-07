@@ -979,10 +979,17 @@ align-items: center;
 .stat1 {
   padding-right: 5rem;
   padding-bottom: 2rem;
+  display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .stat2 {
-  padding-left: 3rem;
+ 
+  display: flex;
+flex-direction: column;
+align-items: center;
+padding-left: 5rem;
 }
 
 @media screen and (max-width: 1000px) {

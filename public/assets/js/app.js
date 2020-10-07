@@ -201,7 +201,6 @@ let supHttp = new XMLHttpRequest();
       
     if(supHttp.status === 200){
         var supRes = JSON.parse(supHttp.response);
-        
         var randomId = Math.floor(Math.random() * 20);  
         
         var charID = randomId;
