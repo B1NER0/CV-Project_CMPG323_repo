@@ -222,12 +222,8 @@ let supHttp = new XMLHttpRequest();
       //  console.log("stories: " + stories);
       //  console.log("series: " + series);
       //  console.log("Name: " + name);
-       console.log("Image: " + thumb + "."+ex);
-       
       
-      //  html.push(`<img src='${res.multimedia[4].url}'/>`)
-      
-        if((thumb + "." + ex) === "image_not_available.jpg")
+        if((thumb + "." + ex) !== "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg")
         {
             sup.src = thumb + "."+ ex;
         }
