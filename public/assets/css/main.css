@@ -494,11 +494,6 @@ a:active {
 
 /*LANGUAGES*/
 
-/* Import the Google Font 'Lato'  @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);*/
-
-
-/* Container styles */
-
 
 .lang {
   padding: 50px 0;
@@ -529,11 +524,6 @@ a:active {
   padding-top: 1rem;
 }
 
-/* END Container styles */
-
-/* Colors for the circles and positions for the graphics */
-
-
 
 .javascript {
   max-width: 90px;
@@ -545,8 +535,6 @@ a:active {
 .javascript + svg .outer {
   stroke: #ba1616;
 }
-
-
 
 .chart svg {
   position: absolute;
@@ -563,7 +551,6 @@ a:active {
   transition: stroke-dashoffset 1s;
   -webkit-animation-play-state: running;
   
-  /* firefox bug fix - won't rotate at 90deg angles */
   -moz-transform: rotate(-90deg) translateX(-190px);
 }
 
@@ -684,13 +671,8 @@ a:active {
 
 
 
-
-
-/* END Keyframes for the initial animation */
-
 /*CONTACT ME */
 
-/* Style inputs */
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;

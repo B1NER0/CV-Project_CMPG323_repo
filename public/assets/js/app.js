@@ -223,14 +223,9 @@ let supHttp = new XMLHttpRequest();
       //  console.log("series: " + series);
       //  console.log("Name: " + name);
       
-        if((thumb + "." + ex) !== "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg")
-        {
-            sup.src = thumb + "."+ ex;
-        }
-        else
-        {
-            sup.src = "assets/img/ImageNotAvailable.png";
-        }
+       
+        sup.src = thumb + "."+ ex;
+       
       
         supName.innerHTML = name;
         comicl.innerHTML = comics;
