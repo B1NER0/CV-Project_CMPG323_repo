@@ -788,7 +788,7 @@ color: #161717;
 
 #TheNasaImgPar {
   
-  height: 40rem;
+  height: 50rem;
   padding-top: 2rem;
   background-attachment: fixed;
   background-position: center;
@@ -871,7 +871,7 @@ input {
   align-items: center;
   justify-content: center;
   padding: 3rem;
-  width: 20%;
+  width: 30%;
 }
 
 #imgLoc {
@@ -1019,7 +1019,7 @@ padding-left: 5rem;
   }
   
    #superImg {
-    width: 20rem;
+    width: 30px;
     height: auto;
   
   }
@@ -1051,7 +1051,8 @@ align-items: center;
     flex-direction: column;
     width: 100%;
   }
-   #superImg {width: 20rem;
+   #superImg {
+     width: 40px;
     height: auto;
     
   }
@@ -1138,3 +1139,25 @@ align-items: center;
         50%  { transform: translateY(0); }
         100% { transform: translateY(0); }
     }
+    
+#emailBtn {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background-color: #2291A3;
+  border: none;
+  color: white;
+}
+
+#emailBtn:hover {
+  cursor: pointer;
+  background-color: #199DB3;
+}
+
+#emailMes {
+  margin-bottom: 2rem;
+}

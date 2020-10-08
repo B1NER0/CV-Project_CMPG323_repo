@@ -226,7 +226,16 @@ let supHttp = new XMLHttpRequest();
        
       
       //  html.push(`<img src='${res.multimedia[4].url}'/>`)
-        sup.src = thumb + "."+ ex;
+      
+        if((thumb + "." + ex) === "image_not_available.jpg")
+        {
+            sup.src = thumb + "."+ ex;
+        }
+        else
+        {
+            sup.src = "assets/img/ImageNotAvailable.png";
+        }
+      
         supName.innerHTML = name;
         comicl.innerHTML = comics;
         eventl.innerHTML = events;
@@ -239,29 +248,30 @@ let supHttp = new XMLHttpRequest();
       console.log(`error ${supHttp.status} ${supHttp.statusText}`);
     }
 }
+    
+    
+        
 
 
+
+document.forms["theEmail"]["lemail"].value = "";
+document.forms["theEmail"]["fname"].value = "";
+document.forms["theEmail"]["subject"].value = "";
 var btnEmail = document.getElementById('emailBtn');
 var emailL = document.getElementById('emailMes');
-var name = document.getElementById('fname');
-var email = document.getElementById('lemail');
-var sub = document.getElementById('subject');
 
 btnEmail.onclick = function(){
    
-   name.value = "ASDFF";
    
-   if(name||name.value)
+   if(document.forms["theEmail"]["lemail"].value === "" || document.forms["theEmail"]["fname"].value === "" || document.forms["theEmail"]["subject"].value === "")
    {
-       console.log("NO");
+       emailL.innerHTML = "Please fill in all the fields";
    }
    else
    {
-       console.log("YES");
+        emailL.innerHTML = "Thanks for the email";
+        document.forms["theEmail"]["lemail"].value = "";
+        document.forms["theEmail"]["fname"].value = "";
+        document.forms["theEmail"]["subject"].value = "";
    }
-   
-   emailL.innerHTML = "Thanks for the email";
-   console.log("THEEMAIL");
-   
-    
 }
